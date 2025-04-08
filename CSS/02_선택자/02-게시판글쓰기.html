@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판 글쓰기</title>
+    <style>
+        /*- 전체적인 레이아웃 */
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            width: 80%;                     /*- w80p */
+            min-width: 800px;               /*- mw */
+            margin: 50px auto;              /* m50-auto */
+            padding: 20px;                  /* p20 */
+            background-color:#fff;        /* backco */
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        /*- 제목스타일 */
+        h1{
+            text-align: center;     /* tac */
+            color:#333;             
+        }
+        .form-group{margin-bottom: 15px;}       /* mb15 */
+        label{
+            display: block;                     /* db */
+            font-weight: bold;                  /* fwb */
+            margin-bottom: 5px;                 /* mb5 */
+        }
+        input[type="text"],
+        textarea{
+            width: 100%;                    /* w100p */
+            padding: 10px;                  /* p10 */
+            border: 1px solid #ccc;       /* border1-solid-#ccc */
+            border-radius: 4px;             /* borr */
+            box-sizing: border-box;         /* box */
+        }
+        button{
+            width: 100%;                        /* w100p */
+            padding: 10px;                      /* p10 */
+            background-color: royalblue;      /* backco */
+            color: white;                     /* c:white */
+            border-radius: 4px;                 /* borr */
+            border:none;
+            cursor: pointer;                    /* cur */
+            font-size: 16px;                    /* fz16 */
+        }
+        button:hover{
+            background-color: #4c00ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>게시판 글쓰기</h1>
+        <form action="" method="post">
+            <div class="form-group">
+                <label for="title">제목</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+        </form>
+    </div>
+
+            <div class="form-group">
+                <label for="writer">작성자</label>
+                <input type="text" id="writer" name="writer" required>
+            </div>
+
+            <div class="form-group">
+                <label for="content">내용</label>
+                <textarea name="content" id="content"
+                        rows="10" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <button type="submit">작성하기</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
