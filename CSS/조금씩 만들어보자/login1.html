@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 화면</title>
+    <link rel="stylesheet" href="css/login1.css">
+</head>
+<body>
+    <div class="container">
+        <form action="/login" method="post">
+        <div class="login-wrap">
+
+        <div id="login">
+        <div class="login-logo">
+            <img src="img/logo-js.png" alt="">
+        </div>    
+        <div class="login-inputbox">
+            <input type="text" name="id" placeholder="아이디">
+            <span class = "border"></span>
+        </div>
+        <div class="login-inputbox">
+            <input type="password" name="pw" placeholder="비밀번호">
+            <span class = "border"></span>
+        </div>
+        <div class="login-remember">
+            <label for="remember-id">
+            <input type="checkbox" id="remember-id" name="remember-id">
+            <span class = "checkmark"></span>
+            <span>아이디 저장</span>
+            </label>
+            <label for="remember-me">
+            <input type="checkbox" id="remember-me" name="remember-me">
+            <span class = "checkmark"></span>
+            <span>자동 로그인</span>
+            </label>
+        </div>
+        <div class="btnbox">
+            <button type = "submit" class="btn">로그인</button>
+
+        </div>
+        <div class="btnbox">
+            <a href = "/join" class="btn">회원가입</a>
+        </div>
+        <div class="copy">
+            <p>copyright &copy; 2025 All rights reserved.</p>
+        </div>
+
+        </div>
+        </div>    
+        </form>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>표현 속성 예시</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+
+    /* display 예시 */
+    .display-block {
+      display: block;
+      background-color: lightcoral;
+      padding: 20px;
+      margin-bottom: 10px;
+    }
+
+    .display-inline {
+      display: inline;
+      background-color: lightblue;
+      padding: 20px;
+    }
+
+    /* visibility 예시 */
+    .visible-example {
+      visibility: visible;
+      background-color: lightgreen;
+      padding: 20px;
+      margin: 10px;
+    }
+
+    .hidden-example {
+      visibility: hidden;
+      background-color: lightgray;
+      padding: 20px;
+      margin: 10px;
+    }
+
+    /* opacity 예시 */
+    .opacity-full {
+      opacity: 1;
+      background-color: lightyellow;
+      padding: 20px;
+      margin: 10px;
+    }
+
+    .opacity-half {
+      opacity: 0.5;
+      background-color: lightpink;
+      padding: 20px;
+      margin: 10px;
+    }
+
+    .opacity-none {
+      opacity: 0;
+      background-color: lightblue;
+      padding: 20px;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <!-- display 예시 -->
+  <div class="display-block">Block 요소</div>
+  <span class="display-inline">Inline 요소</span>
+
+  <!-- visibility 예시 -->
+  <div class="visible-example">보이는 요소</div>
+  <div class="hidden-example">숨겨진 요소 (공간 차지)</div>
+
+  <!-- opacity 예시 -->
+  <div class="opacity-full">불투명 요소</div>
+  <div class="opacity-half">반투명 요소</div>
+  <div class="opacity-none">완전 투명 요소 (공간 차지)</div>
+</body>
+</html>

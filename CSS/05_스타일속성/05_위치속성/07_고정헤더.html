@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>고정 헤더</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      z-index: 1000;
+    }
+    .content {
+      margin-top: 60px; /* 헤더 높이만큼 여백 추가 */
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>고정 헤더</header>
+  <div class="content">
+    <p>스크롤하여 내용을 확인하세요.</p>
+    <p>많은 내용이 들어가면 헤더는 계속 상단에 고정됩니다.</p>
+  </div>
+  <div style = "height:5000px;"></div>
+</body>
+</html>

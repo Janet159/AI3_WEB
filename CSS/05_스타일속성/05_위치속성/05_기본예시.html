@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>위치 속성 예시</title>
+  <style>
+    /* 기본 스타일 설정 */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f0f0f0;
+    }
+
+    /* 위치 속성 예시 */
+    .container {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      background-color: lightblue;
+    }
+
+    .box {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background-color: coral;
+      top: 20px;       /* 상단에서 20px 위치 */
+      right: 20px;     /* 우측에서 20px 위치 */
+      z-index: 10;     /* 쌓임 순서, 값이 클수록 위에 표시됨 */
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+    }
+    .box2 {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background-color: rgb(88, 89, 167);
+      top: 20px;       /* 상단에서 20px 위치 */
+      right: 20px;     /* 우측에서 20px 위치 */
+      z-index: 10;     /* 쌓임 순서, 값이 클수록 위에 표시됨 */
+      top: 50%;
+      left: 50%;
+      z-index: 5;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box"></div>
+    <div class="box2"></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>변형 속성 예시</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+
+    /* transform 예시 */
+    .transform-example {
+      width: 150px;
+      height: 150px;
+      background-color: lightcoral;
+      margin: 20px auto;
+      display: inline-block;
+    }
+
+    .rotate {
+      transform: rotate(45deg);
+    }
+
+    .scale {
+      transform: scale(1.5);
+    }
+
+    .translate {
+      transform: translate(50px, 50px);
+    }
+
+    .skew {
+      transform: skew(20deg, 10deg);
+    }
+
+    /* transform-origin 예시 */
+    .transform-origin-example {
+      width: 150px;
+      height: 150px;
+      background-color: lightblue;
+      margin: 20px auto;
+      display: inline-block;
+      transform: rotate(45deg);
+      transform-origin: top left;
+    }
+
+  </style>
+</head>
+<body>
+  <!-- transform 예시 -->
+  <div class="transform-example rotate">회전</div>
+  <div class="transform-example scale">확대</div>
+  <div class="transform-example translate">이동</div>
+  <div class="transform-example skew">기울임</div>
+
+  <!-- transform-origin 예시 -->
+  <div class="transform-origin-example">기준점 변경</div>
+</body>
+</html>
