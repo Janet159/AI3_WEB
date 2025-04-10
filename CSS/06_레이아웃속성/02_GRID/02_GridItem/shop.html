@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>쇼핑몰 상품 목록</title>
+    <style>
+        .container{
+            width: 1024px;
+            margin: 0 auto;
+        }
+        section{
+            width: 100%;
+            min-height: 400px;
+            padding: 100px 0;
+        }
+        .grid{
+            display: grid;
+            grid-template-columns: repeat(4,auto);
+            row-gap: 62px;
+            column-gap: 62px;
+        }
+        img{width: 100%;}
+        .grid-item{
+            background-color: lab(94.8% 0.01 -0.01);
+            padding: 16px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+            min-height: 400px;
+        }
+        .skeleton{
+            background-color: lab(82.84% 0.35 0.11);
+            border-radius: 4px;
+            position: relative;
+            overflow: hidden;
+        }
+        .skeleton::after{
+            content:"";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: -100%;
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(to right, transparent 0%, rgba(255,255,255,0.6) 50%, transparent 100%);
+            animation: loading 1.5s infinite;
+        }
+        @keyframes loading{
+            100%{
+                left:100%;
+            }
+        }
+        .skeleton.image{
+            width: 100%;
+            height: 200px;
+        }
+        .skeleton.title{
+            width: 80%;
+            height: 30px;
+            margin: 16px 0;
+        }
+        .skeleton.desc{
+            width: 100%;
+            height: 20px;
+            margin-bottom: 10px;
+        }
+        .skeleton.button{
+            width: 40%;
+            height: 40px;
+            margin-top: 16px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>쇼핑몰 상품 목록</h1>
+    <div class="container">
+        <section class="shop">
+            <h2 class="main-title">인기 상품</h2>
+            <div class="grid">
+                <!-- v1 -->
+                <!-- (.grid-item>img[src="https://via.placeholder.com/250x400"])*24 -->
+                 <!-- v2 -->
+                  <div class="grid-item">
+                    <div class = "skeleton image"></div>
+                    <div class = "skeleton title"></div>
+                    <div class = "skeleton desc"></div>
+                    <div class = "skeleton desc" style="width: 60%;"></div>
+                    <div class = "skeleton button"></div>
+                  </div>
+                  <div class="grid-item">
+                    <div class = "skeleton image"></div>
+                    <div class = "skeleton title"></div>
+                    <div class = "skeleton desc"></div>
+                    <div class = "skeleton desc" style="width: 60%;"></div>
+                    <div class = "skeleton button"></div>
+                  </div>
+                  <div class="grid-item">
+                    <div class = "skeleton image"></div>
+                    <div class = "skeleton title"></div>
+                    <div class = "skeleton desc"></div>
+                    <div class = "skeleton desc" style="width: 60%;"></div>
+                    <div class = "skeleton button"></div>
+                  </div>
+                  <div class="grid-item">
+                    <div class = "skeleton image"></div>
+                    <div class = "skeleton title"></div>
+                    <div class = "skeleton desc"></div>
+                    <div class = "skeleton desc" style="width: 60%;"></div>
+                    <div class = "skeleton button"></div>
+                  </div>
+                  <div class="grid-item">
+                    <div class = "skeleton image"></div>
+                    <div class = "skeleton title"></div>
+                    <div class = "skeleton desc"></div>
+                    <div class = "skeleton desc" style="width: 60%;"></div>
+                    <div class = "skeleton button"></div>
+                  </div>
+                  <div class="grid-item">
+                    <div class = "skeleton image"></div>
+                    <div class = "skeleton title"></div>
+                    <div class = "skeleton desc"></div>
+                    <div class = "skeleton desc" style="width: 60%;"></div>
+                    <div class = "skeleton button"></div>
+                  </div>
+                  <div class="grid-item">
+                    <div class = "skeleton image"></div>
+                    <div class = "skeleton title"></div>
+                    <div class = "skeleton desc"></div>
+                    <div class = "skeleton desc" style="width: 60%;"></div>
+                    <div class = "skeleton button"></div>
+                  </div>
+                  <div class="grid-item">
+                    <div class = "skeleton image"></div>
+                    <div class = "skeleton title"></div>
+                    <div class = "skeleton desc"></div>
+                    <div class = "skeleton desc" style="width: 60%;"></div>
+                    <div class = "skeleton button"></div>
+                  </div>
+                  <div class="grid-item">
+                    <div class = "skeleton image"></div>
+                    <div class = "skeleton title"></div>
+                    <div class = "skeleton desc"></div>
+                    <div class = "skeleton desc" style="width: 60%;"></div>
+                    <div class = "skeleton button"></div>
+                  </div>
+                  <div class="grid-item">
+                    <div class = "skeleton image"></div>
+                    <div class = "skeleton title"></div>
+                    <div class = "skeleton desc"></div>
+                    <div class = "skeleton desc" style="width: 60%;"></div>
+                    <div class = "skeleton button"></div>
+                  </div>
+                  <div class="grid-item">
+                    <div class = "skeleton image"></div>
+                    <div class = "skeleton title"></div>
+                    <div class = "skeleton desc"></div>
+                    <div class = "skeleton desc" style="width: 60%;"></div>
+                    <div class = "skeleton button"></div>
+                  </div>
+                  <div class="grid-item">
+                    <div class = "skeleton image"></div>
+                    <div class = "skeleton title"></div>
+                    <div class = "skeleton desc"></div>
+                    <div class = "skeleton desc" style="width: 60%;"></div>
+                    <div class = "skeleton button"></div>
+                  </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
