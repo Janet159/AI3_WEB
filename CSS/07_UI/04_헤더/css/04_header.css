@@ -1,0 +1,161 @@
+
+*{margin: 0;padding: 0;box-sizing: border-box;}
+ul{list-style-type: none;}
+a{text-decoration: none;color: white;}
+body{/* background-color: black; */ color:white}
+
+/* 배너 */
+.banner{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(20, 20, 20);
+    position: relative;
+}
+.banner .close{
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+/* 컨테이너 */
+.container{
+    width: 1540px;
+    margin: 0 auto;
+}
+/* 패밀리사이트 */
+.family{
+    height: 60px;
+    background-color: skyblue;
+}
+.family .container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+}
+
+.family .select-box {
+    /* border: 1px solid white; */
+    min-width: 200px;
+    padding-left: 12px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    /* overflow: hidden; */
+    position: relative;
+    font-size: 14px;
+}
+.family .select-box .title{
+    cursor:pointer;
+    /* width: 100%;
+    height: 100%; */
+}
+.family .select-box:hover .option-list{
+    display: block;
+}
+.family .select-box .option-list{
+    font-size: 12px;
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: rgba(0, 0, 30, 0.8);
+    color: white;
+    z-index: 1000;
+    width: 100%;
+    /* border: 1px solid black; */
+}
+.family .select-box .option-list a{
+    width: 100%;
+    color:white;
+    display: inline-block;
+    padding-left: 12px;
+    height: 40px;
+    line-height: 40px;
+}
+.family .select-box .option-list a:hover{
+    background-color: pink;
+    color: white;
+}
+/* 헤더 */
+header{}
+/* 메인헤더 */
+.main-header{
+    height: 110px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.util{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.util .search-box{}
+.util .search-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+    background-color: rgba(100, 100, 100, 0.3);
+    border-radius: 12px;
+    column-gap: 8px;
+}
+.util .search-form div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.util .search-form input{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: white;
+}
+.util .search-form input::placeholder{
+    color:rgba(240, 240, 240, 0.6);
+}
+.util .gnb{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 30px;
+}
+
+/* 서브헤더 */
+nav{
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sub-gnb{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 50px;
+    font-size: 16px;
+}
+.sub-gnb a:hover{
+    text-decoration: underline;
+}
+.top{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+/* 섹션 */
+section{
+    margin-top: 100px;
+    width: 100%;
+    min-height: 720px;
+    height: calc(100vh - 100px);
+    background: url(../img/back2.jpg) no-repeat top center / 100% 100%;
+}

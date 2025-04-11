@@ -1,0 +1,101 @@
+
+*{
+    margin: 0;padding: 0;box-sizing: border-box;
+    font-family: "Jua", sans-serif;
+    font-weight: 400;
+    font-style: normal;;
+}
+ul{list-style-type: none; }
+a{text-decoration: none; color: black;}
+
+/* 헤더 */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    height: 90px;
+    background-color: black;
+}
+header *{color: white;}
+
+/* 네비게이션 */
+nav{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+nav .gnb{
+    display: flex; justify-content: center; align-items: center;
+    height: 20px;
+    overflow: hidden;
+}
+
+nav .gnb li:hover{
+    background-color: white;
+    height: 100%;
+}
+
+nav .gnb li{
+    display: flex;
+    align-items: center;
+    padding: 30px 20px;
+}
+nav .gnb li a{
+    display: inline-block;
+    
+}
+nav .gnb li:hover a{
+    color: black;
+    animation: slideUp 0.3s ease ,toTop 0.3s 0.3s ease ;
+}
+@keyframes slideUp{
+    0%{transform:translateY(0)}
+    100%{transform:translateY(-100%)}
+}
+
+@keyframes toTop{
+    0%{transform:translateY(100%)}
+    100%{transform:translateY(0)}
+}
+/* 유틸 */
+.util{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+}
+.util div{display: flex;align-items: center;gap: 20px;}
+.util .langs a{opacity: 0.5;}
+.util .langs a.active{opacity: 1;}
+.util .sns{position: relative; top: 3px;}
+.util .sns img{height: 20px; opacity: 0.8;}
+.util .sitemap{position: relative;top: 3px;}
+
+.line{
+    width: 1px;
+    height: 24px;
+    background-color: rgba(255,255,255,0.8);
+}
+
+/* 마우스 커서 효과 */
+.cursor{
+    position: fixed;
+    position: fixed;
+    /* top: 10px;
+    left: 200px; */
+    width: 50px;
+    height: 50px;
+    border: 2px solid white;
+    background-color: black;
+    border-radius: 50%;
+    transition: all 0.03s ease-in-out;
+    /* 요소와 배경의 혼합 방식을 지정하는 속성*/
+    mix-blend-mode: difference; /* 배경과 반대 */
+    /* 마우스 이벤트 무시 */
+    pointer-events: none;
+}
+
+body{
+    background-color: white;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>헤더</title>
+    <link rel="stylesheet" href="css/02_header.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 마우스 커서 효과 -->
+    <div class="cursor"></div>
+    <header>
+        <div class="logo">
+            <a href=""><img src="http://placehold.co/132x25" alt="logo"></a>
+        </div>
+        <!-- 메뉴 -->
+        <nav id="nav">
+            <ul class="gnb">
+                <li><a href="">Company</a></li>
+                <li><a href="">Service</a></li>
+                <li><a href="">Works</a></li>
+                <li><a href="">Blog</a></li>
+            </ul>
+        </nav>
+        <!-- 유틸 -->
+        <!-- .util>(.langs+.sns+.sitemap) -->
+        <div class="util">
+            <div class="langs">
+                <a href="" class="active">KR</a>
+                <a href="">EN</a>
+            </div>
+            <div class="sns">
+                <a href=""><img src="img/naver.svg" alt="naver"></a>
+                <a href=""><img src="img/insta.svg" alt="insta"></a>
+            </div>
+            <div class="line"></div>
+            <div class="sitemap">
+                <a href=""><span class="material-icons">menu</span></a>
+            </div>
+        </div>
+
+
+    </header>
+    <!-- 자바스크립트 작성 영역 -->
+    <script>
+        //shape
+        const shape = document.querySelector('.cursor')
+        
+        //현재 마우스 포인터 위치
+        document.addEventListener("mousemove", (e) => {
+            shape.style.display = 'block'
+            const x = e.clientX /* 마우스 x좌표 */
+            const y = e.clientY /* 마우스 y좌표 */
+            shape.style.transform
+                =`
+                    translate(${x}px, ${y}px)
+                    translate(-50%,-50%)
+                `
+        })
+    </script>
+</body>
+</html>
