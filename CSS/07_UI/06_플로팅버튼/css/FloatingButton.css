@@ -1,0 +1,37 @@
+*{margin: 0;padding: 0;box-sizing: border-box;}
+
+a{text-decoration: none;color: black;}
+
+/* 플로팅 버튼 */
+.floating{
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: pink;
+}
+.floating a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 44px;
+    font-size: 32px;
+    color: white;
+    user-select: none; /* 드래그 방지 */
+}
+
+section{
+    min-height: 600px;
+    width: 100%;
+}
+section.bg{
+    background-color: #ddd;
+}
+
+html{
+    /* 스크롤 부드럽게 이동 */
+    scroll-behavior: smooth;
+}

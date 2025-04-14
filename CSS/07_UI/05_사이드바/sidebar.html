@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사이드바</title>
+    <link rel="stylesheet" href="css/sidebar.css">
+    <!-- 폰트 어썸 4.7 라이브러리 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <!-- ✅사이드바 토글 체크박스 -->
+    <input type="checkbox" name="bars" id="bars">
+    <header>
+        <div class="util">
+            <ul class="util-menu">
+                <li><a href="">로그인</a></li>
+                <li><a href="">회원가입</a></li>
+            </ul>
+        </div>
+        <!-- menu -->
+         <div class="menu">
+            <div class="user">
+                <a href=""><i class="fa fa-user" aria-hidden="true"></i></a>
+            </div>
+            <div class="main-menu">
+                <nav class="gnb pc">
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="board.html">Board</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="side">
+                <!-- href="javascript: ;": a 태그 링크 이동 막기 -->
+                <a href="javascript: ;">
+                    <label for="bars" class="bars">
+                        <span class="bar top"></span>
+                        <span class="bar mid"></span>
+                        <span class="bar bottom"></span>
+                    </label>
+                </a>
+            </div>
+         </div>
+    </header>
+
+
+
+    <!-- 사이드바 -->
+     <div class="sidebar">
+        <ul class="sidemenu">
+            <li>
+                <a href="">
+                    <h3>사이드바 메뉴</h3>
+                    <p>사이드바 메뉴 설정</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <h3>사이드바 메뉴</h3>
+                    <p>사이드바 메뉴 설정</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <h3>사이드바 메뉴</h3>
+                    <p>사이드바 메뉴 설정</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <h3>사이드바 메뉴</h3>
+                    <p>사이드바 메뉴 설정</p>
+                </a>
+            </li>
+        </ul>
+     </div>
+</body>
+</html>
