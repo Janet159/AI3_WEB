@@ -1,0 +1,51 @@
+/* 헤더 */
+header{
+    height: 100px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* 로고 */
+#logo{width: 220px; height: 100%;}
+#logo img{width: 130px; height: 100%;}
+/* 버튼 */
+.btn{
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--main-color);
+    color: white;
+    border-radius: 8px;
+}
+section{
+    min-height: var(--sec-min-height);
+}
+/* ############ 섹션1 ############# */
+section#main{
+    background: url(../img/메인섹션.png);
+}
+section#main .container{
+    position:relative;
+}
+section#main .title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color:var(--accent-color);
+    font-weight:bold;
+}
+img#main-1{
+    width: 230px;height: 230px;
+    transform:rotate(25deg)
+}
+img#main-2{
+    width: 230px;height: 230px;
+    transform:rotate(-25deg)
+}
+img#main-3{
+    width: 380px;height: 380px;
+    transform:rotate(-5deg)
+}
+img#main-4{
+    width: 330px;height: 330px;
+}
+/* ############ 섹션1 ############# */
