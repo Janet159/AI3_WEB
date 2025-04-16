@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 화면</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- ####################### HEADER ########################## -->
+    <header>
+        <div class="container">
+            <div class="flex justify-content-between align-items-center">
+                <!-- 로고 -->
+                <a href="index.html" id="logo" class="flex justify-content-center align-items-center">
+                    <img src="img/logo.png" alt="로고">
+                </a>
+                <!-- 메뉴 -->
+                <nav>
+                    <ul class="flex justify-content-between align-items-center gap-50">
+                        <li><a href="/">신상품</a></li>
+                        <li><a href="list.html">상품목록</a></li>
+                        <li><a href="/">장바구니</a></li>
+                        <li>
+                            <a href="login.html" class="btn btn-primary">로그인</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+        <!-- ####################### HEADER ########################## -->
+
+    <section id="login">
+        <div class="container">
+            <div class="login-wrap pb-100">
+                <h1 class="fz-title text-center my-100">로그인</h1>
+                <div class="inner">
+                    <input type="radio" name="toggle-login" id="radio-login" checked>
+                    <input type="radio" name="toggle-login" id="radio-order">
+                    <!-- 탭 -->
+                    <div class="tab-box mb-50 flex justify-content-center align-items-center gap-50">
+                        <label for="radio-login" id="tab-login" class="tab">로그인</label>
+                        <label for="radio-order" id="tab-order" class="tab">비회원 주문조회 하기</label>
+                    </div>
+                    <!-- 폼1: 로그인 -->
+                    <form action="/login" id="form-login">
+                        <input type="text" class="input mb-20" name="username" autofocus required
+                                placeholder="아이디">
+                        <input type="password" class="input mb-50" name="password" required
+                                placeholder="비밀번호">
+                        <button class="btn btn-lg mb-20">로그인</button>
+                        <div class="flex justify-content-between align-items-center px-20">
+                            <div class="flex justify-content-center align-items-center gap-10">
+                                <input type="checkbox" name="remember-id" id="remember-id">
+                                <label for="remember-id">아이디 저장</label>
+                            </div>
+                            <div class="flex justify-content-between align-items-center gap-20">
+                                <a href="join.html">회원가입</a>
+                                <span class="line"></span>
+                                <a href="join.html">아이디 찾기</a>
+                                <span class="line"></span>
+                                <a href="join.html">비밀번호 찾기</a>
+                            </div>
+                        </div>
+                        <div class="flex justify-content-between align-items-center gap-40 my-50">
+                            <a href="" class="flex justify-content-between align-items-center gap-20">
+                                <img src="img/icon_login_naver.png" alt="네이버 로그인">
+                                <span>네이버 로그인</span>
+                            </a>
+                            <a href="" class="flex justify-content-between align-items-center gap-20">
+                                <img src="img/icon_login_kakao.png" alt="카카오 로그인">
+                                <span>카카오 로그인</span>
+                            </a>
+                        </div>
+                        <p class="py-50 text-center fz-small">
+                            기존 회원분들은 로그인 후 “마이페이지 >회원정보수정>SNS계정연결 해주시기 바랍니다.
+                            (신규회원은 회원가입 후 연결)
+                        </p>
+                    </form>
+                    <!-- 폼2: 비회원 주문조회 -->
+                    <form action="/order" id="form-order">
+                        <input type="text" class="input mb-20" name="orderName" autofocus required
+                                placeholder="주문자명">
+                        <input type="text" class="input mb-50" name="orderNumber" required
+                                placeholder="주문번호">
+                        <button class="btn btn-lg mb-20">확인</button>
+                        
+                        <p class="py-50 text-center fz-small">
+                            주문번호와 비밀번호를 잊으신 경우, 고객센터로 문의하여 주시기 바랍니다.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+        <footer>
+            <div class="footer-top py-40">
+                <div class="container">
+                    <div class="flex justify-content-between align-itmes-start">
+                        <ul class="flex justify-content-between align-itmes-start gap-10">
+                            <li><a href="">회사소개</a></li>
+                            <li><span class="line"></span></li>
+                            <li><a href="">이용약관</a></li>
+                            <li><span class="line"></span></li>
+                            <li><a href="">개인정보처리방침</a></li>
+                            <li><span class="line"></span></li>
+                            <li><a href="">임직원회원가입</a></li>
+                            <li><span class="line"></span></li>
+                        </ul>
+                        <ul class="flex justify-content-between align-itmes-start gap-10">
+                            <li><a href="">공지사항</a></li>
+                            <li><span class="line"></span></li>
+                            <li><a href="">FAQ</a></li>
+                            <li><span class="line"></span></li>
+                            <li><a href="">비회원문의</a></li>
+                            <li><span class="line"></span></li>
+                            <li><a href="">대량구매문의</a></li>
+                            <li><span class="line"></span></li>                            <li><a href="">회사소개</a></li>
+                            <li><span class="line"></span></li>
+                            <li><a href="">월간BIZ문의</a></li>
+                            <li><span class="line"></span></li>
+                            <li><a href="">FAMILY SITE</a></li>
+                            <li><span class="line"></span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="flex justify-content-between align-itmes-start gap-50">
+                        <div class="py-100 fz-small">
+                            <p class="mb-30">알로하클래스의 모든 컨텐츠는 저작권의 보호를 받고 있습니다.</p>
+                            <p class="mb-100">
+                                알로하클래스(주) 주소: 인천광역시 부평구 부평동 693-3 80층 대표: ALOHA 대표번호 1111-222 평일 10:00~18:00 (주말 공휴일 휴무)
+                                <br>
+                                사업자등록번호: 23-190-03500 | 통신판매업 신고번호: 2025-인천부평-0415호 | 호스팅 서비스 제공자 : 룰루루(주)
+                            </p>
+                            <p>
+                                Copyright ALOHACLASS co.abc.All rights reserved.
+                            </p>
+                        </div>
+                        <div class="py-100">
+                            <div class="flex justify-content-center align-itmes-start gap-20">
+                                <a href="" class="sns"><img src="img/icon_bt_fb.png" alt="페이스북"></a>
+                                <a href="" class="sns"><img src="img/icon_bt_blog.png" alt="네이버블로그"></a>
+                                <a href="" class="sns"><img src="img/icon_bt_yt.png" alt="유튜브"></a>
+                                <a href="" class="sns"><img src="img/icon_bt_ista.png" alt="인스타그램"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- ####################### FOOTER ########################## -->
+</body>
+</html>

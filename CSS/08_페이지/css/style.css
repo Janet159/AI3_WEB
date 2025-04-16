@@ -11,16 +11,29 @@ header{
 .btn{
     display: inline-block;
     padding: 12px 24px;
-    background-color: var(--main-color);
+    background-color: black;
     color: white;
     border-radius: 8px;
 }
+.btn.btn-primary{
+    background-color: var(--main-color);
+    
+}
+.btn.btn-lg{
+    width: 100%;
+    padding: 24px 48px;
+    font-size: 24px;
+}
 section{
     min-height: var(--sec-min-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /* ############ 섹션1 ############# */
 section#main{
     background: url(../img/메인섹션.png);
+    height: 680px;
 }
 section#main .container{
     position:relative;
@@ -49,3 +62,354 @@ img#main-4{
     width: 330px;height: 330px;
 }
 /* ############ 섹션1 ############# */
+
+/* ############ 섹션2 ############# */
+section.card-view{
+    height: auto;
+    background-color: var(--main-color);
+}
+section.card-view .card-sec{
+    width: 360px;
+}
+section.card-view .card-sm-sec{
+    width: 360px;
+    height: 215px;
+}
+
+section.card-view .card-lg{
+    width: 555px;
+    height: 728px;
+}
+section.card-view .card-md{
+    width: 100%;
+    height: 493px;
+}
+section.card-view .card-md a{
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+}
+section.card-view .card-md img{
+    height: 100%;
+    object-fit: cover;
+}
+section.card-view .card-sm{
+    width: 170px;
+    height: 215px;
+}
+section.card-view .card-sm a{
+    height: 100%;
+}
+section.card-view .card-sm img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.card{
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+    transition: all 0.4s;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.card:hover{
+    transform:translateY(-40px);
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.25);
+}
+.card-lg, .card-md, .card-sm{}
+.card img{
+    width: 100%;
+    height: 100%;
+}
+/* ############ 섹션2 ############# */
+/* ############ 섹션3 ############# */
+section#special{
+    height: auto;
+    background-color: var(--sub-color);
+}
+.timer-box{
+    position: relative;
+}
+.timer-box .label{
+    background-color: var(--accent-color);
+    padding: 12px 24px;
+    color: white;
+    border-radius: 30px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-75%);
+}
+.timer-box #special-timer{
+    background-color: white;
+    padding: 15px 120px;
+    color: var(--accent-color);
+    border-radius: 50px;
+    font-weight: bolder;
+}
+/* ############ 섹션3 ############# */
+/* ############ 섹션4 ############# */
+section#top10{
+    background-color: var(--main-color);
+}
+section#top10 .card{
+    background-color: white;
+    width: 250px;
+}
+section#top10 .card .img-box{
+    width: 100%;
+    height: 200px;
+}
+section#top10 .card .img-box a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+section#top10 .card .img-box img{
+    width: 100%;
+    object-fit: cover;
+}
+section#top10 .card .content-box{
+    height: 100px;
+}
+section#top10 .card .content-box .title{}
+section#top10 .card .content-box .price{
+    color: var(--accent-color);
+}
+/* ############ 섹션4 ############# */
+
+/* 애니메이션 */
+.floating{
+    animation: floating 4s ease-in-out 0s infinite;
+}
+
+@keyframes floating{
+    50%{
+        transform: translateY(-10%);
+    }
+}
+
+/* ############ 푸터 ############# */
+footer{
+    background-color: var(--accent-color);
+}
+footer *{color: white;}
+footer .line{
+    display: inline-block;
+    width: 1px;
+    height: 14px;
+    position: relative;
+    top: 2px;
+    background-color: white;
+}
+footer .footer-top{
+    border-bottom: 1px solid white;
+}
+footer .footer-bottom{}
+footer .sns{
+    display: inline-block;
+    width: 42px;
+    height: 42px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+/* ############ 푸터 ############# */
+
+/* 반응형 */
+/* lg */
+@media screen and(max-width: 1360px){
+    .grid.col-lg-1{grid-template-columns: repeat(1, auto);}
+    .grid.col-lg-2{grid-template-columns: repeat(2, auto);}
+    .grid.col-lg-3{grid-template-columns: repeat(3, auto);}
+    .grid.col-lg-4{grid-template-columns: repeat(4, auto);}
+    .grid.col-lg-5{grid-template-columns: repeat(5, auto);}
+    
+    .px-lg-20{padding-left: 20px; padding-right: 20px;}
+    .w-lg-100{width: 100% !important;}
+    
+}
+/* md */
+@media screen and (max-width: 860px){
+    .grid.col-md-1{grid-template-columns: repeat(1, auto);}
+    .grid.col-md-2{grid-template-columns: repeat(2, auto);}
+    .grid.col-md-3{grid-template-columns: repeat(3, auto);}
+    .grid.col-md-4{grid-template-columns: repeat(4, auto);}
+    .grid.col-md-5{grid-template-columns: repeat(5, auto);}
+}
+/* sm */
+@media screen and (max-width: 480px){
+    .grid.col-sm-1{grid-template-columns: repeat(1, auto);}
+    .grid.col-sm-2{grid-template-columns: repeat(2, auto);}
+    .grid.col-sm-3{grid-template-columns: repeat(3, auto);}
+    .grid.col-sm-4{grid-template-columns: repeat(4, auto);}
+    .grid.col-sm-5{grid-template-columns: repeat(5, auto);}
+}
+
+
+/* ############ 로그인 ############# */
+section#login{}
+[name="toggle-login"]{display: none;}
+.login-wrap{
+    width: 670px;
+    margin: auto;
+    min-height: 1200px;
+}
+.login-wrap .tab{
+    display: inline-block;
+    width: 310px;
+    text-align: center;
+    padding: 30px 50px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #aaa;
+    border-bottom: 1px solid #aaa;
+}
+
+/* 탭 전환 */
+#radio-login:checked ~ .tab-box #tab-login{
+    color: black;
+    border-bottom-color: black;
+}
+#radio-order:checked ~ .tab-box #tab-order{
+    color: black;
+    border-bottom-color: black;
+}
+/* 폼 전환 */
+#radio-login:checked ~ #form-login{
+    display: block;
+}
+#radio-order:checked ~ #form-order{
+    display: block;
+}
+.login-wrap .input{
+    display: inline-block;
+    width: 100%;
+    padding: 20px 40px;
+    outline: none;
+    border: 1px solid #aaa;
+    font-size: 20px;
+}
+
+.login-wrap .input:focus{
+    border:1px solid var(--main-color);
+    box-shadow: 0 0 10px rgba(255, 195, 195, 0.8);
+}
+
+.login-wrap [type="checkbox"]{
+    transform: scale(1.5);
+}
+
+.login-wrap label{
+    user-select: none;
+    cursor: pointer;
+}
+
+.login-wrap p{
+    color: #aaa;
+}
+
+.login-wrap .line{
+    display: inline-block;
+    position: relative;
+    top: 1px;
+    width: 1px;
+    height: 14px;
+    background-color: #111;
+}
+
+#form-login{
+    display:none;
+}
+#form-order{
+    display:none;
+}
+
+/* ############ 회원가입 ############# */
+section#join{}
+
+.join-wrap{
+    width: 768px;
+    margin: auto;
+}
+
+.join-wrap label{
+    min-width: 200px;
+    font-size: 20px;
+}
+.join-wrap .input{
+    width: calc(100% - 200px);
+    padding: 20px 10px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #aaa;
+    font-size: 20px;
+}
+
+.join-wrap [type="radio"]{
+    transform:scale(1.5)
+}
+
+.border-box{
+    border:1px solid #aaa;
+    border-radius: 10px;
+    padding: 20px;
+    color: #aaa;
+}
+
+.border-box [type="radio"]{
+    transform:scale(1.5)
+}
+
+.agree-text{
+    font-size: 24px;
+}
+
+.color-accent{
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+#join-floating{
+    position: fixed;
+    left: 50px;
+    bottom: 150px;
+}
+
+/* ############ 상품목록 ############# */
+section#list{}
+section#list .card{
+    width: 310px;
+}
+section#list .card .img-box{
+    height: 260px;
+}
+section#list .card .img-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+section#list .card .content-box{}
+section#list .card .content-box .title{
+    font-weight: bold;
+}
+section#list .card .content-box .tag{
+    color: #aaa;
+}
+section#list .card .content-box span.price{
+    font-weight: bold;
+}
+section#list .card .content-box span.orign-price{
+    color: #aaa;
+    text-decoration: line-through;
+}
+section#list .card .content-box span.discount{
+    color: red;
+    font-weight: bold;
+}
+
+
+
+
+
