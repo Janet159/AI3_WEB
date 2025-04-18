@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>댓글</title>
+    <link rel="stylesheet" href="css/08_댓글.css">
+</head>
+<body>
+    <section id="comment">
+        <h2>댓글 목록</h2>
+        <div class="comment-list" id="commentList">
+            <!-- 여기에 댓글 카드를 추가 -->
+            <!-- <div class="comment-card">
+                <div class="title">
+                    <div class="item">
+                        <div class="avatar">
+                            <img src="img/avatar.png" alt="프로필">
+                        </div>
+                        <div class="writer">고건우</div>
+                    </div>
+                    <div class="item">
+                        <div class="date">2025-04-18</div>
+                    </div>
+                </div>
+                <div class="content-box">
+                    <p class="content">
+                        자바미션 제가 다 풀었어요.. 님들아 언제 풀거임?
+                    </p>
+                </div>
+            </div>comment-card 끝 -->
+        </div><!-- comment-list 끝 -->
+
+        <h3>댓글 작성</h3>
+        <div class="input-box">
+            <input type="text" name="writer" id="writer" placeholder="이름">
+            <textarea name="content" id="content" rows="3" cols="50"
+                        placeholder="내용을 작성해주세요"></textarea>
+            <div class="btn-box">
+                <button id="commentBtn">작성</button>
+            </div>
+        </div>
+    </section>
+    <script src="js/08_댓글.js"></script>
+</body>
+</html>

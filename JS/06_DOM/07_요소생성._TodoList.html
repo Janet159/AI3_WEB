@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소 생성 - TodoList</title>
+    <script>
+        // writer() 메소드로 요소 생성하기
+        document.writeln('<h1>Todo List</h1>')
+
+        //createElement() 메소드로 요소 생성하기
+        const h3 = document.createElement('h3')
+        h3.textContent = '이름을 작성해주세요'
+        // ➡<h3> 이름을 작성해주세요</h3>
+
+        // 자식요소 추가하기
+        // 선택요소.appendChild(추가요소)
+        // : 선택요소의 자식요소를 추가하는 메소드
+        document.body.appendChild(h3)
+
+        // 문서 준비 이벤트
+        document.addEventListener("DOMContentLoaded", () =>{
+            // 요소 노드 생성
+            const li = document.createElement("li")
+            // 텍스트 노드 생성
+            const text = document.createTextNode("jQuery 공부")
+            // 속성 노드 생성
+            const textStyle = document.createAttribute("style")
+            textStyle.value = 'color : orange'
+
+            //<li>
+            //<li>jQuery</li>
+            li.appendChild(text)
+            //<li style = "color : orange"> jQuery 공부</li>
+            li.setAttributeNode(textStyle)
+            //<li style = "color : orange"> jQuery 공부 할게요~!</li>
+            li.append("할게요~!")
+
+            //<ul> ⬅ <li> 를 자식 요소로 추가
+            const ul = document.getElementById("list")
+            ul.appendChild(li)
+
+            // 버튼 및 입력 태그 선택
+            // TODO : 추가, 삭제 버튼, 입력 태그 선택
+            //[추가] : btnCreate
+            //[삭제] : btnRemove
+            //(입력) : input
+            const btnCreate = document.getElementById("create")
+            const btnRemove = document.getElementById("remove")
+            const input = document.getElementById("input")
+
+            // 이벤트 핸들러 추가
+            // addEventListener( 이벤트타입, 콜백함수)
+            btnCreate.addEventListener("click", add)
+            btnRemove.addEventListener("click", remove)
+            input.addEventListener("keyup", enter)
+
+            // 리스트 추가 기능
+            function add(){
+                const ul = document.getElementById('list')
+                const li = document.createElement('li')
+                const input = document.getElementById('input')
+                const text = document.createTextNode(input.value)
+
+                //체크 박스 추가하기
+                const checkbox = document.createElement('input')
+                checkbox.type = 'checkbox'
+                li.appendChild(checkbox)    //<li>
+                li.appendChild(text)        //<li> 입력내용
+                ul.appendChild(li)          //<ul><li>입력내용
+                input.value=''              //추가 후 입력 상자 비우기
+                input.focus()
+
+                // 체크박스 이벤트
+                checkbox.addEventListener('change', () =>{
+                    //checkbox.checked : 체크여부 true, false
+                    const completeList = document.getElementById('complete')
+                    if(checkbox.checked){
+                        li.style.textDecoration = 'line-through'    //취소선
+                        completeList.appendChild(li)
+                        // ul.removeChild(li)
+                    } else{
+                        li.style.textDecoration = 'none'        //취소선❌
+                        ul.appendChild(li)
+                        // completeList.removeChild(li)
+                    }
+                })
+            }
+            // 리스트 삭제 기능
+            function remove(){
+                const ul = document.querySelector('#list')
+                const lists = document.querySelectorAll('#list li')
+
+                //선택요소.removeChild(자식요소)
+                //: 선택요소의 지정한 자식요소를 삭제한다
+                // ul.removeChild(lists[lists.length-1])   //마지막 할일 삭제
+
+                //선택요소.remove()
+                //: 선택요소를 제거
+                const todoList = ul.childNodes
+                for (let i = todoList.length-1; i >= 0; i--) {
+                    todoList[i].remove()
+                }
+            }
+            // 키보드 엔터 입력
+            function enter(event){
+                // event.keyCode: 엔터 키를 가리킨다 (엔터의 키코드는 13)
+                console.log(event.keyCode);
+                
+                if(event.keyCode == 13){
+                    add()
+                }
+            }
+
+
+        })
+    </script>
+</head>
+<body>
+    <hr>
+
+    <h3>Todo List</h3>
+    <input type="text" name="input" id="input" placeholder="입력하세요">
+    <button id="create">추가</button>
+    <button id="remove">삭제</button>
+    <ul id="list"></ul>
+    <hr>
+    <h3>완료한 일</h3>
+    <ul id="complete"></ul>
+</body>
+</html>

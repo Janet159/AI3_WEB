@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>좋아요</title>
+    <!-- material icons -->
+    <!-- FILL : 0..1 로 해야 outline, fill 모두 사용가능 -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0" />
+    <link rel="stylesheet" href="css/09_좋아요.css">
+</head>
+<body>
+    <div class="container">
+        <div class="feed-list">
+            <div class="feed">
+                <div class="title">
+                    <div class="item">
+                        <div class="avatar">
+                            <img src="img/avatar.png" alt="프로필">
+                        </div>
+                        <div class="writer">
+                            my_id
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="material-symbols-outlined">more_vert</span>
+                    </div>
+                </div><!-- title 끝 -->
+                <div class="content">
+                    <div class="img-box" id="imgBox">
+                        <img src="img/content.jpg" alt="피드 이미지">
+                    </div>
+                    <div class="content-box">
+                        <p class="text"></p>
+                    </div>
+                </div><!-- content 끝 -->
+                <div class="action-box"> 
+                    <div class="item">
+                        <!-- 좋아요 -->
+                        <span class="material-symbols-outlined icon icon-heart">favorite</span>
+                        <!-- 댓글 -->
+                        <span class="material-symbols-outlined icon">chat_bubble</span>
+                        <!-- DM -->
+                        <span class="material-symbols-outlined icon">send</span>
+                    </div>
+                    <div class="item">
+                        <!-- 스크랩 -->
+                        <span class="material-symbols-outlined icon">bookmark</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- sweetalert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/09_좋아요.js"></script>
+</body>
+</html>

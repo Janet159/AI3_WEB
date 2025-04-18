@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scope</title>
+    <script>
+        /* 
+        Scope(스코프)
+            : 변수에 접근할 수 있는 범위
+            - 전역 범위
+            - 함수 범위
+            - 블록 범위 : var ❌, let ⭕
+        */
+
+        /* 
+            Hoisting ( 호이스팅 )
+            : 선언을 범위 내에서 코드의 맨 위로 끌어올리는 동작(초기화까지 끌어올려지진 않음)
+            * JavaScript 에서는 코드를 실행하기 전에
+                var 변수 선언, 선언적 함수 등을 호이스팅 합니다.
+        */
+
+        // function 함수 ( 매개변수 ){ }
+        function test( ){
+            console.log("test() 시작");
+            
+            console.log(`local : ${local}`);
+            var local = 10
+            
+            // var 는 블록{ } scope 지원하지 않는다.
+            if( local > 0){
+                var local = 20          // 같은 함수 스코프의 변수, 새로운 변수 아님
+                console.log(`local : ${local}`);
+            }
+            console.log(`local : ${local}`);
+        }
+        
+        function test2( ){
+            console.log("test2() 시작");
+            // console.log(`local2 : ${local2}`);       //에러 (호이스팅은 되지만 초기화가 안되서)
+            let local2 = 10
+            
+            // var 는 블록{ } scope 지원하지 않는다.
+            if( local2 > 0){
+                let local2 = 20
+
+                //호이스팅
+                console.log(`local2 : ${local2}`);
+                
+                // let local2 = 20
+                console.log(`local2 : ${local2}`);
+            }
+            console.log(`local2 : ${local2}`);
+            console.log("test2() 끝");
+        }
+
+        test()
+        test2()
+
+        /* 
+            var, let 각각 호이스팅 적용됨
+            * let 은 호이스팅 되지만, 값이 초기화되지 않으면 접근 불가 (에러)
+            * var 는 호이스팅도 돼고, 값도 접근할 수 있지만 undefined
+            * ✅ 호이스팅은 선언이 끌어올려지는 것이지 초기화가 끌어올려지는 것은 아니다.
+            * ✅ let 은 블록 스코프를 지원하고, var은 지원하지 않는다.
+        */
+
+       console.log(test3)
+       console.log(test4)
+       
+       var test3 = 'test'
+       let test4 = 'test'
+       
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

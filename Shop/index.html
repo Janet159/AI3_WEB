@@ -343,5 +343,40 @@
             </div>
         </footer>
         <!-- ####################### FOOTER ########################## -->
+
+        <script>
+            //특가 타이머 함수
+            function timer(){
+                // 현재 날짜 시간
+                const now = new Date()
+
+                //내일 자정(00:00:00)
+                const tomorrow = new Date()
+                tomorrow.setHours(24,0,0,0)     //오늘 24:00:00 == 내일 00:00:00
+
+                //시간차
+                const diff = tomorrow - now
+
+                let time = Math.floor(diff / 1000)    //ms -> s 단위로 변환 소수점 제거
+                let hours = Math.floor(time /(60 * 60))
+                let mins = Math.floor(time % (60 * 60) / 60)
+                let secs = time % 60
+
+                // leading zero 적용
+                hours = String(hours).padStart(2,'0')
+                mins = String(mins).padStart(2,'0')
+                secs = String(secs).padStart(2,'0')
+
+
+
+                const T = `${hours} : ${mins} : ${secs}`
+
+                // id = "special-timer"
+                let $timer = document.getElementById('special-timer')
+                $timer.textContent = T      //$timer 요소 안의 텍스트를 이걸로 바꿔줘!
+            }
+            setInterval(timer,1000)         //1초마다 함수를 반복 실행
+
+        </script>
 </body>
 </html>
