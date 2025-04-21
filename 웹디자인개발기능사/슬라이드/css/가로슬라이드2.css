@@ -1,0 +1,15 @@
+.container {
+    width: 1200px;
+}
+
+.slide {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    overflow: hidden;
+}
+
+.slide img {
+    width: 1200px;
+    transition: transform 1s ease;
+}
