@@ -1,0 +1,19 @@
+#slides{
+    width: 1200px;
+    height: 600px;
+    overflow: hidden;
+}
+
+.slide-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.slide-container .slide{
+    width: 1200px;
+    height: 600px;
+}
+.slide-container .slide img{
+    width: 1200px;
+    height: 100%;
+}
